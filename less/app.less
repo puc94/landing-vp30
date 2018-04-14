@@ -1,0 +1,121 @@
+// Variables
+@link-color:        #e31d1a; // sea blue
+@link-color-hover:  darken(@link-color, 10%);
+
+body {
+	color: #fff;
+	font-family: Montserrat;
+}
+
+/**
+ * Global
+ */
+ a, .btn {
+ 	transition: .3s;
+ }
+.btn {
+	border: 0;
+	border-radius: 0;
+	outline: 0;
+	background: @link-color;
+	font-weight: bold;
+	padding: 10px 15px;
+	box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.15);
+	&:hover {
+		background: @link-color-hover;
+		color: darken(#fff, 10%);;
+	}
+}
+
+/** 
+ * Navbar
+ */
+.navbar {
+	background: url(../imgs/navbar-back.png);
+	background-size: cover;
+	border-radius: 0;
+	border: 0;
+	margin: 0;
+	.navbar-header {
+		padding: 30px 0;
+		.navbar-brand {
+			height: auto;
+			padding: 0;
+		}
+	}
+	.navbar-nav {
+		padding: 25px 0;
+		li {
+			a {
+				color: #fff;
+				padding: 10px 20px;
+				line-height: 20px;
+				&.btn {
+					&:hover {
+						background: #fff;
+						color: @link-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+/**
+ * Banner
+ */
+#banner {
+	position: relative;
+	.banner-back {
+		width: 100%;
+	}
+	.caption {
+		position: absolute;
+		left: 0;
+		top: 55%;
+		width: 100%;
+		text-align: center;
+		.banner-title {
+			font-weight: 900;
+		}
+		.btn {
+			background: #edcf21;
+			color: @link-color;
+			border-radius: 5px;
+			margin-top: 40px;
+			&:hover {
+				background: darken(#edcf21, 10%);
+				color: darken(@link-color, 10%);
+			}
+		}
+	}
+}
+
+/**
+ * Sobre
+ */
+#sobre {
+	.sobre-img {
+			position: absolute;
+			height: 100%;
+			right: 90%;
+	}
+	.items {
+		font-family: Montserrat;
+		font-weight: bold;
+		font-size: 14px;
+		color: #666;
+		text-align: left;
+		.item {
+			margin-bottom: 40px;
+			display: table;
+			img, p {
+				vertical-align: middle;
+				display: table-cell;
+			}
+			img {
+				margin-right: 15px;
+			}
+		}
+	}
+}
