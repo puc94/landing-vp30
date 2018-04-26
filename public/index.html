@@ -10,10 +10,18 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet" type="text/css">
 	<!-- Font awesome -->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Wow animate -->
+	<link rel="stylesheet" type="text/css" href="plugins/wow/animate.css">
 	<!-- Stylesheet -->
 	<link rel="stylesheet" type="text/css" href="css/app.min.css">
 </head>
 <body>
+<!-- Pre loader -->
+<div class="preloader" >
+	<div class="status"></div>
+</div>
+
+<!-- Header -->
 <nav class="navbar navbar-default">
 	<div class="container">
 		<div class="row">
@@ -29,12 +37,12 @@
 					<img src="./imgs/logo.png" height="30">
 				</a>
 			</div>
-
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="">HOME</a></li>
-					<li><a href="">BENEFÍCIOS</a></li>
-					<li><a href="">SOLICITE UMA AMOSTRA</a></li>
+					<li><a href="#beneficios" class="js-scroll-trigger">BENEFÍCIOS</a></li>
+					<li><a href="#mercado" class="js-scroll-trigger">MERCADO</a></li>
+					<li><a href="#cadastro" class="js-scroll-trigger">SOLICITE UMA AMOSTRA</a></li>
 					<li><a href="" class="btn">CADASTRE-SE</a></li>
 				</ul>
 			</div>
@@ -47,7 +55,7 @@
 	<img src="./imgs/banner-back.png" class="banner-back" />
 	<div class="caption">
 		<div class="container">
-			<div class="col-lg-offset-3 col-lg-6 col-sm-offset-1 col-sm-10 col-xs-12">
+			<div class="col-lg-offset-3 col-lg-6 col-sm-offset-1 col-sm-10 col-xs-12 wow fadeInDown">
 				<h2 class="banner-title">MAIS RESISTÊNCIA, MENOS PERDAS E MAIS PRODUTIVIDADE</h2>
 				<button class="btn" data-toggle="modal" data-target="#myModal">ENTRE EM CONTATO</button>
 			</div>
@@ -56,26 +64,29 @@
 </section>
 
 <!-- Sobre -->
-<section id="sobre">
+<section id="beneficios">
 	<div class="container">
-		<div class="col-sm-6">
+		<div class="col-sm-6 wow fadeInDown">
 			<img src="./imgs/sobre-bag.png" class="img-responsive" />
 		</div>
 		<div class="col-sm-6">
+			<div class="text-center">
+				<h2 style="color: #e31d1a; font-weight: bold; margin-top: 0;">BENEFÍCIOS</h2>
+			</div>
 			<div class="items">
-				<div class="item">
+				<div class="item wow fadeInLeft">
 					<img src="./imgs/icon1.png" width="100">
 					<p>Elaborado com resinas de alto desempenho: <br> embalagens duas vezes mais resistente ao impacto e não rompem</p>
 				</div>
-				<div class="item">
+				<div class="item wow fadeInLeft" data-wow-delay="300ms">
 					<img src="./imgs/icon2.png" width="100">
 					<p>Filme livre de marcações</p>
 				</div>
-				<div class="item">
+				<div class="item wow fadeInLeft" data-wow-delay="600ms">
 					<img src="./imgs/icon3.png" width="100">
 					<p>Uma bobina do filme VP30 empacota 36% mais arroz do que o mesmo peso de bobina do filme padrão de mercado</p>
 				</div>
-				<div class="item">
+				<div class="item wow fadeInLeft" data-wow-delay="900ms">
 					<img src="./imgs/icon4.png" width="100">
 					<p>Compra do filme por metro: <br>sem preocupação com peso e espessura. <br>Rendimento garantido!</p>
 				</div>
@@ -85,21 +96,37 @@
 </section>
 
 <!-- Video -->
-<section id="video">
+<section id="mercado">
 	<div class="container">
-		<div class="col-sm-6">
-			<video controls> 
-				<source src="./video/sample.webm" type=video/webm>
-				<source src="./video/sample.ogv" type=video/ogg>
-				<source src="./video/sample.mp4" type=video/mp4>
-				<source src="./video/sample.3gp" type=video/3gp>
-			</video>
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2 text-center wow fadeInDown">
+				<h2>MERCADO</h2>
+				<small>Especialistas do setor trazem aqui mais informações e opiniões sobre o mercado de embalagens para arroz.</small>
+			</div>
 		</div>
-		<div class="col-sm-6">
-			<h2 class="text-uppercase video-title">
-				<strong>Lorem ipsum dolor sit amet</strong>, sed do eiusmod
-				tempor incididunt ut labore et dolore
-			</h2>
+		<div class="row">
+			<div class="col-sm-10 col-sm-offset-1">
+				<div class="accordions">
+					<div class="accordion wow fadeInLeft" data-wow-delay="300ms">
+						<a class="accordion-title"><h4>INFOGRAFICO</h4></a>
+						<div class="accordion-panel">
+							<label>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</label>
+						</div>
+					</div>
+					<div class="accordion wow fadeInDown" data-wow-delay="600ms">
+						<a class="accordion-title"><h4>VIDEO</h4></a>
+						<div class="accordion-panel">
+							<label>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</label>
+						</div>
+					</div>
+					<div class="accordion wow fadeInDown" data-wow-delay="900ms">
+						<a class="accordion-title"><h4>ARTIGO</h4></a>
+						<div class="accordion-panel">
+							<label>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</label>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
@@ -108,12 +135,12 @@
 <section id="cadastro">
 	<div class="container">
 		<div class="row ebook-row">
-			<div class="col-sm-7 col-sm-offset-5 ebook-thumb-col">
+			<div class="col-sm-7 col-sm-offset-5 ebook-thumb-col wow fadeInRight">
 				<div class="thumbnail">
 					<img src="./imgs/ebook-thumb.png">
 				</div>
 			</div>
-			<div class="col-sm-7 ebook-form-col">
+			<div class="col-sm-7 ebook-form-col wow fadeInLeft">
 				<div class="form-content">
 					<h1 class="title">Cadastro e download</h1>
 					<label class="description">Cadastre-se e receba informações sobre a tecnologia VP30 e conte com a recomendação de nossos especialistas</label>
@@ -150,12 +177,12 @@
 <section id="term">
 	<div class="container">
 		<div class="row term-row">
-			<div class="col-sm-7 term-thumb-col">
+			<div class="col-sm-7 term-thumb-col wow fadeInLeft">
 				<div class="thumbnail">
 					<img src="./imgs/term-thumb.png">
 				</div>
 			</div>
-			<div class="col-sm-5 term-form-col">
+			<div class="col-sm-5 term-form-col wow fadeInRight">
 				<div class="form-content">
 					<h2 class="title">TEM INTERESSE EM UMA AMOSTRA?</h2>
 					<h4 class="sub-title">DEIXE SEU CONTATO</h4>
@@ -191,7 +218,7 @@
 <!-- Newsletter -->
 <section id="newsletter">
 	<div class="container">
-		<div class="row">
+		<div class="row wow fadeInDown">
 			<div class="col-sm-6">
 				<h2 class="title">Fale diretamente com nossos especialistas!</h2>
 			</div>
@@ -214,12 +241,12 @@
 <footer id="footer">
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-6 text-left"><img src="./imgs/logo1.png" height="50"></div>
-			<div class="col-xs-6 text-right"><img src="./imgs/logo2.png" height="50"></div>
+			<div class="col-xs-6 text-left wow fadeInLeft"><img src="./imgs/logo1.png" height="50"></div>
+			<div class="col-xs-6 text-right wow fadeInRight"><img src="./imgs/logo2.png" height="50"></div>
 		</div>
 		<div class="row">
 			<div class="col-sm-12 text-center">
-				<label class="copyright">Copyright © 2018 EVERY</label>
+				<label class="copyright wow fadeInDown">Copyright © 2018 EVERY</label>
 			</div>
 		</div>
 	</div>
@@ -268,7 +295,9 @@
 
 <!-- Scripts -->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="plugins/wow/wow.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
